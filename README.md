@@ -20,21 +20,21 @@ This repository contains SQL queries and documentation for analyzing the Netflix
 CREATE DATABASE netflix_shows_db;
 USE netflix_shows_db;
 
--- Import Dataset:
+Import Dataset:
 -- Use the "Table Data Import Wizard" in MySQL Workbench to import the CSV file into a table named netflix_shows.
 
-### Difficulties Encountered and Interesting Observations
+Difficulties Encountered and Interesting Observations
 
 **Difficulties:**
-- Initially faced issues with CSV file format and column structure mismatch.
-- Resolved by adjusting table structure using ALTER TABLE to match CSV columns.
+Initially faced issues with CSV file format and column structure mismatch.
+Resolved by adjusting table structure using ALTER TABLE to match CSV columns.
 
 **Interesting Observation:**
-- Noted a diverse range of genres and significant production from the United States.
+Noted a diverse range of genres and significant production from the United States.
 
-### Step 2: Data Fun
+Step 2: Data Fun
 
-#### Simple SQL Queries
+Simple SQL Queries
 
 -- Total Number of Shows:
 SELECT COUNT(*) AS total_shows FROM netflix_shows;
@@ -52,17 +52,17 @@ FROM netflix_shows
 WHERE duration LIKE '%season%';
 -- Result: 106
 
-### Cool Facts Found
+Cool Facts Found
 
 - **Fact 1:** The dataset includes exactly 100 shows.
 - **Fact 2:** The average duration of shows in the dataset is approximately 100.73 minutes.
 - **Fact 3:** There are a total of 106 seasons represented across all shows in the dataset.
 
-### Step 3: Ask Away
+Step 3: Ask Away
 
-#### Formulated Questions and Answers
+Formulated Questions and Answers
 
-**Question 1: What are the most popular genres?**
+Question 1: What are the most popular genres?
 
 ```sql
 SELECT genre, COUNT(*) AS genre_count
@@ -70,21 +70,21 @@ FROM netflix_shows
 GROUP BY genre
 ORDER BY genre_count DESC;
 
-### Findings
+Findings
 - Identified 'Action & Adventure, Anime Features, International Movies' as the most popular genre with 12 shows.
 
-**Question 2: Which countries have the highest number of shows?**
+Question 2: Which countries have the highest number of shows?
 
 SELECT country, COUNT(*) AS show_count
 FROM netflix_shows
 GROUP BY country
 ORDER BY show_count DESC;
 
-### Findings
+Findings
 - United States leads with 17 shows.
 - Japan follows with 13 shows.
 
-### GitHub Repository
-Repository Link: [GitHub Repository Link](GitHub Repository Link)
+GitHub Repository
+Repository Link: [GitHub Repository Link](https://github.com/ClemenceKyende/Database-Assignment.git)
 
 
