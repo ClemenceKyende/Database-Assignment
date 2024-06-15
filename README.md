@@ -1,81 +1,90 @@
-# Netflix Shows Dataset
+# Netflix Shows Dataset Analysis
 
-This repository contains the assignment for importing and analyzing the Netflix Shows dataset in MySQL Workbench.
+## Overview
 
-## Dataset Choice
+This repository contains SQL queries and documentation for analyzing the Netflix Shows dataset using MySQL Workbench.
 
-I chose the **Netflix Shows** dataset for this assignment.
+### Dataset
 
-## Import Process
+- **Dataset:** Netflix Shows
+- **Source:** [Download Dataset](https://drive.google.com/file/d/1Cth8F5M7smd4uqE7QNX6vHBSOdK_eank/view)
 
-To ensure the table was empty before importing new data, I used the `Truncate table before import` option in MySQL Workbench's Table Data Import Wizard.
+## SQL Queries and Documentation
 
-### Steps to Import
+### Step 1: Data Dive
 
-1. **Download and Prepare the Dataset**:
-   - Download the dataset from [this link](https://drive.google.com/file/d/1Cth8F5M7smd4uqE7QNX6vHBSOdK_eank/view).
-   - Ensure the CSV file (`netflix_titles.csv`) is clean and properly formatted.
+#### Importing the Dataset into MySQL Workbench
 
-2. **Create a New Schema and Table in MySQL Workbench**:
-   - Created the `netflix_shows` schema and the `netflix_titles` table using the following SQL commands:
-     ```sql
-     CREATE SCHEMA IF NOT EXISTS netflix_shows;
+```sql
+-- Create Database:
+CREATE DATABASE netflix_shows_db;
+USE netflix_shows_db;
 
-     USE netflix_shows;
+-- Import Dataset:
+-- Use the "Table Data Import Wizard" in MySQL Workbench to import the CSV file into a table named netflix_shows.
 
-     CREATE TABLE netflix_titles (
-         show_id TEXT,
-         type TEXT,
-         title TEXT,
-         director TEXT,
-         cast TEXT,
-         country TEXT,
-         date_added TEXT,
-         release_year INT,
-         rating TEXT,
-         duration TEXT,
-         listed_in TEXT,
-         description TEXT
-     );
-     ```
+### Difficulties Encountered and Interesting Observations
 
-3. **Use Table Data Import Wizard**:
-   - Right-clicked on the `netflix_titles` table and selected `Table Data Import Wizard`.
-   - Selected the CSV file and mapped the columns to the MySQL table.
-   - Checked the box for `Truncate table before import`.
+**Difficulties:**
+- Initially faced issues with CSV file format and column structure mismatch.
+- Resolved by adjusting table structure using ALTER TABLE to match CSV columns.
 
-4. **Start the Import**:
-   - Followed through the steps in the wizard and started the import process.
+**Interesting Observation:**
+- Noted a diverse range of genres and significant production from the United States.
 
-### Difficulties Faced
+### Step 2: Data Fun
 
-- **Missing "Next" Button**: The Data Import Wizard didn't display the "Next" button initially, so I had to resize the window to see it.
+#### Simple SQL Queries
 
-### Interesting Observation
+-- Total Number of Shows:
+SELECT COUNT(*) AS total_shows FROM netflix_shows;
+-- Result: 100
 
-One interesting thing I noticed about the Netflix Shows dataset is the diversity of genres and the global reach of the content, with shows from many different countries and in various languages.
+-- Average Duration of Shows:
+SELECT AVG(CAST(SUBSTRING_INDEX(duration, ' ', 1) AS DECIMAL(10,2))) AS average_duration
+FROM netflix_shows
+WHERE duration LIKE '%min%';
+-- Result: 100.73 minutes
 
-## Viewing Data
+-- Total Number of Seasons:
+SELECT SUM(CAST(SUBSTRING_INDEX(duration, ' ', 1) AS UNSIGNED)) AS total_seasons
+FROM netflix_shows
+WHERE duration LIKE '%season%';
+-- Result: 106
 
-To view the data in the `netflix_titles` table:
+### Cool Facts Found
 
-1. **Using MySQL Workbench**:
-   - Right-click on the `netflix_titles` table and select `Select Rows - Limit 1000`.
-   - The query will run automatically and display the results.
+- **Fact 1:** The dataset includes exactly 100 shows.
+- **Fact 2:** The average duration of shows in the dataset is approximately 100.73 minutes.
+- **Fact 3:** There are a total of 106 seasons represented across all shows in the dataset.
 
-2. **Using SQL Query**:
-   - Open a new SQL query tab and run the following command:
-     ```sql
-     USE netflix_shows;
-     SELECT * FROM netflix_titles LIMIT 1000;
-     ```
+### Step 3: Ask Away
 
-## Repository Structure
+#### Formulated Questions and Answers
 
-- `README.md`: This file.
-- `create_table.sql`: SQL script to create the `netflix_titles` table (optional).
-- `netflix_titles.csv`: The dataset file (if included).
+**Question 1: What are the most popular genres?**
 
-## Link to Repository
+```sql
+SELECT genre, COUNT(*) AS genre_count
+FROM netflix_shows
+GROUP BY genre
+ORDER BY genre_count DESC;
 
-[GitHub Repository Link](https://github.com/ClemenceKyende/Database-Assignment.git)
+### Findings
+- Identified 'Action & Adventure, Anime Features, International Movies' as the most popular genre with 12 shows.
+
+**Question 2: Which countries have the highest number of shows?**
+
+SELECT country, COUNT(*) AS show_count
+FROM netflix_shows
+GROUP BY country
+ORDER BY show_count DESC;
+
+### Findings
+- United States leads with 17 shows.
+- Japan follows with 13 shows.
+
+### GitHub Repository
+Repository Link: [GitHub Repository Link](GitHub Repository Link)
+
+
