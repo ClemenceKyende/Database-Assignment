@@ -21,7 +21,7 @@ CREATE DATABASE netflix_shows_db;
 USE netflix_shows_db;
 
 -- Import Dataset:
--- Use the "Table Data Import Wizard" in MySQL Workbench to import the CSV file into a table named netflix_shows.
+-- Used the "Table Data Import Wizard" in MySQL Workbench to import the CSV file into a table named netflix_shows.
 
 ### Difficulties Encountered and Interesting Observations
 
@@ -85,6 +85,6 @@ ORDER BY show_count DESC;
 - Japan follows with 13 shows.
 
 ### GitHub Repository
-Repository Link: [GitHub Repository Link](GitHub Repository Link)
+Repository Link: [GitHub Repository Link](https://github.com/ClemenceKyende/Database-Assignment.git)
 
 
