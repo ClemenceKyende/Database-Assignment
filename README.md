@@ -85,6 +85,8 @@ ORDER BY show_count DESC;
 - Japan follows with 13 shows.
 
 ### GitHub Repository
-Repository Link: [https://github.com/ClemenceKyende/Database-Assignment.git]
+
+For more information, visit the [repository](https://github.com/ClemenceKyende/Database-Assignment.git).
+
 
 
