@@ -103,7 +103,7 @@ Based on the genre counts the most popular genres among Netflix shows, ranked by
  - International TV Shows - 20 shows
  - Action & Adventure - 20 shows
 
-![Most Popular Genres Based on Genre Count on Netflix Shows](images/genre_count_chart.png)
+![Most Popular Genres Based on Genre Count on Netflix Shows](images/genre_count_chart.jpg)
 
 **Question 2: Which countries have the highest number of shows?**
 
@@ -137,13 +137,11 @@ Based on the analysis of the Netflix Shows dataset, the countries with the highe
  - United Kingdom with 8 shows
 - There are 41 entries where specific country names were not provided or appeared blank in the dataset.
 
-![Countries with the Highest Number of Shows Based on Show Count on Netflix](images/country_show_count_chart.png)
+![Countries with the Highest Number of Shows Based on Show Count on Netflix](images/country_show_count_chart.jpg)
 
 ## Total Number of Seasons Across Shows
 
-![Total Number of Seasons Across Shows](images/total_seasons_chart.png)
-
-**Description**: This bar chart illustrates the distribution of shows based on the total number of seasons. Most shows have only one season (23 shows), followed by two seasons (10 shows). There are a few shows with up to nine seasons, highlighting the variability in show duration across the dataset.
+![Total Number of Seasons Across Shows](images/total_seasons_chart.jpg)
 
 ## GitHub Repository
 
