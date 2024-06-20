@@ -6,8 +6,8 @@ This repository contains SQL queries and documentation for analyzing the Netflix
 
 ### Dataset
 
-- **Dataset-** Netflix Shows
-- **Source-** [Download Dataset](https://drive.google.com/file/d/1Cth8F5M7smd4uqE7QNX6vHBSOdK_eank/view)
+- **Dataset -** Netflix Shows
+- **Source -** [Download Dataset](https://drive.google.com/file/d/1Cth8F5M7smd4uqE7QNX6vHBSOdK_eank/view)
 
 ## SQL Queries and Documentation
 
@@ -42,7 +42,7 @@ USE netflix_shows_db;
 
 SELECT COUNT(*) AS total_shows FROM netflix_shows;
 
-- **Result-** 100
+- **Result -** 100
 
 ## Average Duration of Shows
 
@@ -52,7 +52,7 @@ FROM netflix_shows
 
 WHERE duration LIKE '%min%';
 
-- **Result-** 100.73 minutes
+- **Result -** 100.73 minutes
 
 ## Total Number of Seasons
 
@@ -62,7 +62,7 @@ FROM netflix_shows
 
 WHERE duration LIKE '%season%';
 
-- **Result-** 106
+- **Result -** 106
 
 ## Cool Facts Found
 
