@@ -143,6 +143,5 @@ Based on the analysis of the Netflix Shows dataset, the countries with the highe
 
 ![Total Number of Seasons Across Shows](images/total_seasons_chart.jpg)
 
-## GitHub Repository
-
-For more information, visit the [repository](https://github.com/ClemenceKyende/Database-Assignment.git).
+## Pitch Deck
+For a more detailed overview of this project, including objectives, methodology, and findings, please refer to the [Pitch Deck](https://www.canva.com/design/DAGIkk3WYmo/KW8FlTQpR1qmA12nNHdsHg/edit?utm_content=DAGIkk3WYmo&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton).
