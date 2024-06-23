@@ -11,7 +11,7 @@ This repository contains SQL queries and documentation for analyzing the Netflix
 
 ## SQL Queries and Documentation
 
-### Step 1: Data Dive
+### Step 1 - Data Dive
 
 #### Importing the Dataset into MySQL Workbench
 
@@ -34,7 +34,7 @@ USE netflix_shows_db;
 **Interesting Observation**
 - Noted a diverse range of genres and significant production from the United States.
 
-## Step 2: Data Fun
+## Step 2 - Data Fun
 
 ## Simple SQL Queries
 
@@ -70,7 +70,7 @@ WHERE duration LIKE '%season%';
 - **Fact 2** The average duration of shows in the dataset is approximately 100.73 minutes.
 - **Fact 3** There are a total of 106 seasons represented across all shows in the dataset.
 
-## Step 3: Ask Away
+## Step 3 - Ask Away
 
 ## Formulated Questions and Answers
 
